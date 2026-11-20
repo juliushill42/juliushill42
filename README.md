@@ -1,42 +1,99 @@
 <div align="center">
 
-<svg width="800" height="180" xmlns="http://www.w3.org/2000/svg">
+<svg width="900" height="220" xmlns="http://www.w3.org/2000/svg">
   <defs>
-    <linearGradient id="pulse" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#0a0a0a">
-        <animate attributeName="stop-color" values="#0a0a0a;#1a0a2a;#0a1a2a;#0a0a0a" dur="8s" repeatCount="indefinite"/>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050508">
+        <animate attributeName="stop-color" values="#050508;#0a0515;#050a15;#050508" dur="10s" repeatCount="indefinite"/>
       </stop>
-      <stop offset="50%" stop-color="#111">
-        <animate attributeName="stop-color" values="#111;#2a1a3a;#1a2a3a;#111" dur="8s" repeatCount="indefinite"/>
-      </stop>
-      <stop offset="100%" stop-color="#0a0a0a">
-        <animate attributeName="stop-color" values="#0a0a0a;#0a1a2a;#1a0a2a;#0a0a0a" dur="8s" repeatCount="indefinite"/>
+      <stop offset="100%" stop-color="#0a0a0f">
+        <animate attributeName="stop-color" values="#0a0a0f;#150a1a;#0a151a;#0a0a0f" dur="10s" repeatCount="indefinite"/>
       </stop>
     </linearGradient>
-    <filter id="glow">
-      <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="1.5" result="blur"/>
       <feMerge>
-        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="blur"/>
         <feMergeNode in="SourceGraphic"/>
       </feMerge>
     </filter>
   </defs>
-  <rect width="800" height="180" fill="url(#pulse)"/>
-  <text x="400" y="70" font-family="monospace" font-size="48" font-weight="700" fill="#e0e0e0" text-anchor="middle" filter="url(#glow)">TITANU</text>
-  <text x="400" y="105" font-family="monospace" font-size="14" fill="#aaa" text-anchor="middle">the system is the intelligence</text>
-  <text x="400" y="130" font-family="monospace" font-size="11" fill="#666" text-anchor="middle">
-    <animate attributeName="fill" values="#666;#8a6;#68a;#666" dur="12s" repeatCount="indefinite"/>
-    AI whispering — capabilities most systems pretend are impossible
+  <rect width="900" height="220" fill="url(#bg)"/>
+
+  <!-- Particle field -->
+  <g filter="url(#softglow)">
+    <circle cx="80" cy="40" r="1.2" fill="#6a8">
+      <animate attributeName="cy" values="40;30;40" dur="4.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="150" cy="70" r="0.8" fill="#86a">
+      <animate attributeName="cx" values="150;165;150" dur="5.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="220" cy="35" r="1.5" fill="#a68">
+      <animate attributeName="cy" values="35;50;35" dur="3.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="2.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="310" cy="90" r="1" fill="#68a">
+      <animate attributeName="cx" values="310;325;310" dur="6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="3.5s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="400" cy="50" r="1.3" fill="#8a6">
+      <animate attributeName="cy" values="50;35;50" dur="4.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="480" cy="110" r="0.9" fill="#a86">
+      <animate attributeName="cx" values="480;495;480" dur="5.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="4.1s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="560" cy="45" r="1.4" fill="#6a8">
+      <animate attributeName="cy" values="45;60;45" dur="3.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="2.9s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="640" cy="80" r="1.1" fill="#86a">
+      <animate attributeName="cx" values="640;655;640" dur="4.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9;0.2" dur="3.7s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="720" cy="55" r="1.6" fill="#a68">
+      <animate attributeName="cy" values="55;40;55" dur="5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;1;0.4" dur="3.3s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="800" cy="100" r="0.7" fill="#68a">
+      <animate attributeName="cx" values="800;815;800" dur="6.5s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.6;0.2" dur="4.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="120" cy="160" r="1" fill="#8a6">
+      <animate attributeName="cy" values="160;145;160" dur="4.1s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="250" cy="180" r="1.2" fill="#a86">
+      <animate attributeName="cx" values="250;265;250" dur="5.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4.2s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="380" cy="170" r="0.8" fill="#6a8">
+      <animate attributeName="cy" values="170;155;170" dur="3.9s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.1;0.7;0.1" dur="2.8s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="510" cy="190" r="1.3" fill="#86a">
+      <animate attributeName="cx" values="510;525;510" dur="4.7s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;1;0.3" dur="3.6s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="670" cy="165" r="1" fill="#a68">
+      <animate attributeName="cy" values="165;150;165" dur="5.3s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.8;0.2" dur="4s" repeatCount="indefinite"/>
+    </circle>
+    <circle cx="820" cy="150" r="1.4" fill="#68a">
+      <animate attributeName="cx" values="820;835;820" dur="6.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.3;0.9;0.3" dur="3.8s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <text x="450" y="95" font-family="monospace" font-size="52" font-weight="700" fill="#e8e8e8" text-anchor="middle" filter="url(#softglow)">TITANU</text>
+  <text x="450" y="125" font-family="monospace" font-size="13" fill="#aaa" text-anchor="middle">the system is the intelligence</text>
+  <text x="450" y="148" font-family="monospace" font-size="10" fill="#777" text-anchor="middle">
+    <animate attributeName="fill" values="#777;#9a7;#79a;#777" dur="14s" repeatCount="indefinite"/>
+    AI whispering — particle systems most people never see
   </text>
-  <circle cx="100" cy="40" r="2" fill="#4a4">
-    <animate attributeName="opacity" values="0.2;1;0.2" dur="3s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="700" cy="140" r="1.5" fill="#a46">
-    <animate attributeName="opacity" values="0.1;0.8;0.1" dur="4s" repeatCount="indefinite"/>
-  </circle>
-  <circle cx="200" cy="150" r="1" fill="#46a">
-    <animate attributeName="opacity" values="0.3;1;0.3" dur="5s" repeatCount="indefinite"/>
-  </circle>
 </svg>
 
 **Sovereign. Evidence-driven. Hardware-agnostic. Local when it matters.**
